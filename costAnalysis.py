@@ -18,7 +18,7 @@ cost = pd.read_csv('spend.csv', sep=',')
 #cost.set_index('date', inplace=True)
 print(cost.describe())
 
-print('Dates before modification {}'.format(cost['date']))
+#print('Dates before modification {}'.format(cost['date']))
 
 cost['newDate'] = cost['date'].apply(lambda x: str(x) + '20')
 cost['newDate2'] = cost['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
@@ -45,10 +45,10 @@ current_datetime = datetime.combine(tday, min_time)
 print('From the start date of Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'].sum(), (current_datetime - cost['newDate2'].min()).days,
                                                                               cost['cost'].sum() / (current_datetime - cost['newDate2'].min()).days))
 
+print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
+#print("Type ", type(cost['newDate2'].max()))
 
-print("Type ", type(cost['newDate2'].max()))
-
-sb.lineplot(x="date", y="cost", data=cost)
+#sb.lineplot(x="date", y="cost", data=cost)
 #sb.distplot(cost)
 #ax.plot(cost['cost'])
 #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
