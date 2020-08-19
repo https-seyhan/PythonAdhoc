@@ -10,7 +10,7 @@ os.chdir('/home/saul/Desktop')
 
 pd.options.display.float_format = '{:.1f}'.format
 figsize = (1500 / 50, 400 / 50)
-fig, ax = plt.subplots(1, 1, figsize=figsize)
+fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
 
 cost = pd.read_csv('spend.csv', sep=',')
 
@@ -52,7 +52,10 @@ print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].de
 #sb.distplot(cost)
 #ax.plot(cost['cost'])
 #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
-ax = sb.boxplot(x='type', y='cost', data=cost)
+plt.subplot(211)
+ax1 = sb.distplot(cost['cost'])
+plt.subplot(212)
+ax2 = sb.boxplot(x='type', y='cost', data=cost)
 #g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
 #g.despine(left=True)
 #g.set_ylabels("Cost")
