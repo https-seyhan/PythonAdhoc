@@ -52,15 +52,46 @@ print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].de
 #sb.distplot(cost)
 #ax.plot(cost['cost'])
 #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
-plt.subplot(211)
+plt.subplot(221)
 ax1 = sb.distplot(cost['cost'])
-plt.subplot(212)
+plt.subplot(222)
 ax2 = sb.boxplot(x='type', y='cost', data=cost)
 #g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
 #g.despine(left=True)
 #g.set_ylabels("Cost")
 #g.set_xlabels(("Cost Type"))
 
+plt.subplot(212)
+sb.boxplot(x='market', y='cost', data=cost)
 plt.show()
-#cost.sort(cost.date)
-#cost['newdate']
+
+plt.show()
+
+def plotDists(cost):
+    wolli = cost[cost['market']=='wolli']
+    print(wolli.describe())
+
+    coles = cost[cost['market']=='coles']
+    print(coles.describe())
+
+    #wolli['cost'].plot.hist(histtype='step', bins=4)
+    wolli['cost'].plot.density()
+    coles['cost'].plot.density()
+    plt.show()
+
+def plotBox(cost):
+    wolli = cost['cost'][cost['market'] == 'wolli']
+    print(wolli.describe())
+
+    coles = cost['cost'][cost['market'] == 'coles']
+    print(coles.describe())
+
+    markets = pd.DataFrame({'coles': coles, 'wolli': wolli})
+    #markets.boxplot()
+
+    #print(markets.columns)
+    #print(markets.head())
+
+
+#plotDists(cost)
+plotBox(cost)
