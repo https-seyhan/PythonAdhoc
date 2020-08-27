@@ -46,6 +46,9 @@ current_datetime = datetime.combine(tday, min_time)
 print('From the start date of Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'].sum(), (current_datetime - cost['newDate2'].min()).days,
                                                                               cost['cost'].sum() / (current_datetime - cost['newDate2'].min()).days))
 
+print('From the start date of Alcohol Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'][cost['type'] == 'alcohol'].sum(), (current_datetime - cost['newDate2'].min()).days,
+                                                                              cost['cost'][cost['type'] == 'alcohol'].sum() / (current_datetime - cost['newDate2'].min()).days))
+
 print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
 #print("Type ", type(cost['newDate2'].max()))
 
@@ -69,9 +72,18 @@ ticks = [0, int(np.round(0.1*cost_max,0)), int(np.round(0.2*cost_max,0)), int(np
          int(np.round(0.5*cost_max,0)), int(np.round(0.6*cost_max,0)), int(np.round(0.7*cost_max,0)),
          int(np.round(0.8*cost_max,0)), int(np.round(0.9*cost_max,0)),int(np.round(cost_max,0))]
 plt.yticks(ticks, ticks)
+
+plt.figure()
+sb.countplot(x="type", data=cost)
+
 plt.show()
 
 print("Max Cost ", int(np.round(max(cost['cost']), 0)))
+
+typeCount = cost['type'].value_counts()
+print(typeCount)
+
+
 
 def plotDists(cost):
     wolli = cost[cost['market']=='wolli']
