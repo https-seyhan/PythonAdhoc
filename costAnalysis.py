@@ -11,7 +11,7 @@ os.chdir('/home/saul/Desktop')
 
 pd.options.display.float_format = '{:.1f}'.format
 figsize = (1500 / 50, 400 / 50)
-fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
+#fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
 
 cost = pd.read_csv('spend.csv', sep=',')
 
@@ -56,45 +56,63 @@ print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].de
 #sb.distplot(cost)
 #ax.plot(cost['cost'])
 #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
-plt.subplot(221)
-ax1 = sb.distplot(cost['cost'])
-plt.subplot(222)
-ax2 = sb.boxplot(x='type', y='cost', data=cost)
-#g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
-#g.despine(left=True)
-#g.set_ylabels("Cost")
-#g.set_xlabels(("Cost Type"))
 
-plt.subplot(212)
-sb.boxplot(x='market', y='cost', data=cost)
-cost_max = int(np.round(max(cost['cost']), 0))
-ticks = [0, int(np.round(0.1*cost_max,0)), int(np.round(0.2*cost_max,0)), int(np.round(0.3*cost_max,0)), int(np.round(0.4*cost_max,0)),
-         int(np.round(0.5*cost_max,0)), int(np.round(0.6*cost_max,0)), int(np.round(0.7*cost_max,0)),
-         int(np.round(0.8*cost_max,0)), int(np.round(0.9*cost_max,0)),int(np.round(cost_max,0))]
-plt.yticks(ticks, ticks)
+def plotSubPlots(cost):
+    plt.subplot(221)
+    ax1 = sb.distplot(cost['cost'])
+    plt.subplot(222)
+    ax2 = sb.boxplot(x='type', y='cost', data=cost)
+    # g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
+    # g.despine(left=True)
+    # g.set_ylabels("Cost")
+    # g.set_xlabels(("Cost Type"))
 
-plt.figure()
-sb.countplot(x="type", data=cost)
+    plt.subplot(212)
+    sb.boxplot(x='market', y='cost', data=cost)
+    cost_max = int(np.round(max(cost['cost']), 0))
+    ticks = [0, int(np.round(0.1 * cost_max, 0)), int(np.round(0.2 * cost_max, 0)), int(np.round(0.3 * cost_max, 0)),
+             int(np.round(0.4 * cost_max, 0)),
+             int(np.round(0.5 * cost_max, 0)), int(np.round(0.6 * cost_max, 0)), int(np.round(0.7 * cost_max, 0)),
+             int(np.round(0.8 * cost_max, 0)), int(np.round(0.9 * cost_max, 0)), int(np.round(cost_max, 0))]
+    plt.yticks(ticks, ticks)
 
-plt.show()
+    print("Max Cost ", int(np.round(max(cost['cost']), 0)))
 
-print("Max Cost ", int(np.round(max(cost['cost']), 0)))
+    typeCount = cost['type'].value_counts()
 
-typeCount = cost['type'].value_counts()
-print(typeCount)
+    plt.show()
 
 
+def plotBars(cost):
+    plt.figure()
+    sb.countplot(x="type", data=cost)
+    plt.figure()
+    sb.countplot(x="market", data=cost)
+    plt.show()
 
 def plotDists(cost):
+
+    #plt.figure(figsize=figsize)
+
+    fig, ax = plt.subplots(figsize=figsize)
     wolli = cost[cost['market']=='wolli']
-    print(wolli.describe())
+    #print(wolli.describe())
 
     coles = cost[cost['market']=='coles']
-    print(coles.describe())
+    #print(coles.describe())
 
     #wolli['cost'].plot.hist(histtype='step', bins=4)
     wolli['cost'].plot.density()
+    #plt.legend(cost['market'])
     coles['cost'].plot.density()
+    plt.xlabel('Coles and Wolli Costs')
+    markets = cost['market'][(cost['market']=='wolli') | (cost['market']=='coles')].unique()
+    print(markets)
+
+    print("Series ", pd.Series(cost['market'][(cost['market']=='wolli') | (cost['market']=='coles')].get_values()))
+
+    #legends = pd.DataFrame({coles:'coles', wolli:'wolli'})
+    plt.legend(markets)
     plt.show()
 
 def plotBox(cost):
@@ -112,4 +130,5 @@ def plotBox(cost):
 
 
 #plotDists(cost)
-plotBox(cost)
+plotDists(cost)
+#plotBox(cost)
