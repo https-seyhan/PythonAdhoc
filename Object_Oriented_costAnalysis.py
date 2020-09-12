@@ -6,6 +6,9 @@ from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
 import seaborn as sb
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
+import sys
 
 class Spending():
     def __init__(self):
@@ -15,6 +18,7 @@ class Spending():
         os.chdir('/home/saul/Desktop')
         self.spend = pd.read_csv('spend.csv', sep=',')
         self.figsize = (1500 / 50, 400 / 50)
+
         self.__readFile()
 
     def __readFile(self):
@@ -35,6 +39,7 @@ class Spending():
         self.spend.sort_values(by='newDate2', inplace=True)
 
     def plotSubPlots(self):
+        self.fig, self.ax = plt.subplots(figsize=self.figsize)
         plt.subplot(221)
         ax1 = sb.distplot(self.spend['cost'])
         plt.subplot(222)
@@ -57,9 +62,27 @@ class Spending():
         print("Max Cost ", int(np.round(max(self.spend['cost']), 0)))
 
         typeCount = self.spend['type'].value_counts()
-
+        plt.tight_layout() # make sure all graphs are tighty
         plt.show()
+
+    def plotBars(self):
+        plt.figure()
+        sb.countplot(x="type", data=self.spend)
+        plt.figure(figsize=self.figsize)
+        sb.countplot(x="market", data=self.spend)
+        plt.show()
+
+    def showDataset(self):
+        self.datatable = QtWidgets.QTableWidget(parent=self)
+        self.datatable.setColumnCount(len(self.spend.columns))
+        self.datatable.setRowCount(len(self.spend.index))
+        for i in range(len(self.spend.index)):
+            for j in range(len(spend.columns)):
+                self.datatable.setItem(i, j, QtGui.QTableWidgetItem(str(df.iget_value(i, j))))
+
 
 if __name__ == '__main__':
     spend = Spending()
-    spend.plotSubPlots()
+    #spend.plotSubPlots()
+    #spend.plotBars()
+    spend.showDataset()
