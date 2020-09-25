@@ -1,3 +1,4 @@
+#Python GUI programming example.
 import PySimpleGUI as sg
 import spacy
 import en_core_web_sm
