@@ -133,9 +133,9 @@ def plotBox(cost):
     #print(markets.head())
 
 setEnvironment()
-cost = importData()
-shapeData(cost)
-plotSubPlots(cost)
+#cost = importData()
+shapeData(importData())
+plotSubPlots(importData())
 #plotDists(cost)
 #plotDists(cost)
 #plotBox(cost)
