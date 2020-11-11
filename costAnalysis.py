@@ -6,7 +6,9 @@ from datetime import date
 from matplotlib import pyplot as plt
 import  seaborn as sb
 import os
-sb.set(style="whitegrid")
+
+#sb.set(style="whitegrid")
+plt.style.use('seaborn-whitegrid')
 os.chdir('/home/saul/Desktop')
 
 pd.options.display.float_format = '{:.1f}'.format
@@ -128,7 +130,7 @@ def plotBox(cost):
     #print(markets.columns)
     #print(markets.head())
 
-
+plotSubPlots(cost)
 #plotDists(cost)
-plotDists(cost)
+#plotDists(cost)
 #plotBox(cost)
