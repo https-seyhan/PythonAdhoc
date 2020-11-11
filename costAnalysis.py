@@ -7,57 +7,59 @@ from matplotlib import pyplot as plt
 import  seaborn as sb
 import os
 
-#sb.set(style="whitegrid")
-plt.style.use('seaborn-whitegrid')
-os.chdir('/home/saul/Desktop')
+def setEnvironment():
+    #sb.set(style="whitegrid")
+    plt.style.use('seaborn-whitegrid')
+    os.chdir('/home/saul/Desktop')
 
-pd.options.display.float_format = '{:.1f}'.format
-figsize = (1500 / 50, 400 / 50)
-#fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
+    pd.options.display.float_format = '{:.1f}'.format
+    figsize = (1500 / 50, 400 / 50)
+    #fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
 
-cost = pd.read_csv('spend.csv', sep=',')
+def importData():
+    cost = pd.read_csv('spend.csv', sep=',')
+    #cost.set_index('date', inplace=True)
+    print(cost.describe())
+    return cost
 
-#sb.boxplot(y="cost", data=cost)
-#cost.set_index('date', inplace=True)
-print(cost.describe())
+def shapeData(cost):
+    #print('Dates before modification {}'.format(cost['date']))
 
-#print('Dates before modification {}'.format(cost['date']))
+    cost['newDate'] = cost['date'].apply(lambda x: str(x) + '20')
+    cost['newDate2'] = cost['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
+    #print('Date2!!!!!', cost['newDate2'])
 
-cost['newDate'] = cost['date'].apply(lambda x: str(x) + '20')
-cost['newDate2'] = cost['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
-print('Date2!!!!!', cost['newDate2'])
-#cost.boxplot(cost['cost'])
-cost['date'] = pd.to_datetime(cost.date)
-cost['newDate2'] = pd.to_datetime(cost.newDate2)
+    cost['date'] = pd.to_datetime(cost.date)
+    cost['newDate2'] = pd.to_datetime(cost.newDate2)
 
-cost.set_index('newDate2')
-cost.sort_values(by='newDate2', inplace=True)
+    cost.set_index('newDate2')
+    cost.sort_values(by='newDate2', inplace=True)
 
-#todays date
-tday = date.today()
+    #todays date
+    tday = date.today()
 
-min_time = datetime.min.time()
-current_datetime = datetime.combine(tday, min_time)
+    min_time = datetime.min.time()
+    current_datetime = datetime.combine(tday, min_time)
 
-#timestamp = time.mktime(time.strptime(tday, '%Y-%m-%d'))
+    #timestamp = time.mktime(time.strptime(tday, '%Y-%m-%d'))
 
-#print(cost['date'])
-#print('From the start date of ':%Y-%m-%d' Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['newDate2'].min(), cost['cost'].sum(), (cost['newDate2'].max() - cost['newDate2'].min()).days,
-#                                                                              cost['cost'].sum() / (cost['newDate2'].max() - cost['newDate2'].min()).days))
+    #print(cost['date'])
+    #print('From the start date of ':%Y-%m-%d' Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['newDate2'].min(), cost['cost'].sum(), (cost['newDate2'].max() - cost['newDate2'].min()).days,
+    #                                                                              cost['cost'].sum() / (cost['newDate2'].max() - cost['newDate2'].min()).days))
 
-print('From the start date of Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'].sum(), (current_datetime - cost['newDate2'].min()).days,
+    print('From the start date of Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'].sum(), (current_datetime - cost['newDate2'].min()).days,
                                                                               cost['cost'].sum() / (current_datetime - cost['newDate2'].min()).days))
 
-print('From the start date of Alcohol Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'][cost['type'] == 'alcohol'].sum(), (current_datetime - cost['newDate2'].min()).days,
+    print('From the start date of Alcohol Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['cost'][cost['type'] == 'alcohol'].sum(), (current_datetime - cost['newDate2'].min()).days,
                                                                               cost['cost'][cost['type'] == 'alcohol'].sum() / (current_datetime - cost['newDate2'].min()).days))
 
-print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
-#print("Type ", type(cost['newDate2'].max()))
+    print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
+    #print("Type ", type(cost['newDate2'].max()))
 
-#sb.lineplot(x="date", y="cost", data=cost)
-#sb.distplot(cost)
-#ax.plot(cost['cost'])
-#ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
+    #sb.lineplot(x="date", y="cost", data=cost)
+    #sb.distplot(cost)
+    #ax.plot(cost['cost'])
+    #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
 
 def plotSubPlots(cost):
     plt.subplot(221)
@@ -130,6 +132,9 @@ def plotBox(cost):
     #print(markets.columns)
     #print(markets.head())
 
+setEnvironment()
+cost = importData()
+shapeData(cost)
 plotSubPlots(cost)
 #plotDists(cost)
 #plotDists(cost)
