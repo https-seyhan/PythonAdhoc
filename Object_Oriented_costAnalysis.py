@@ -10,6 +10,7 @@ from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
 import sys
 
+# Generate Spending class
 class Spending():
     def __init__(self):
         print("TESST")
