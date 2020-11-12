@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
-import  seaborn as sb
+import seaborn as sb
 import os
 
 def setEnvironment():
@@ -13,7 +13,7 @@ def setEnvironment():
     os.chdir('/home/saul/Desktop')
 
     pd.options.display.float_format = '{:.1f}'.format
-    figsize = (1500 / 50, 400 / 50)
+    #figsize = (1500 / 50, 400 / 50)
     #fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
 
 def importData():
@@ -62,10 +62,22 @@ def shapeData(cost):
     #ax = sb.barplot(x="type", y="cost", data=cost, estimator=sum)
 
 def plotSubPlots(cost):
+    #figsize = (1500 / 50, 400 / 50)
+    
+    median = cost['cost'].median()
+    mean = cost['cost'].mean()
+    mode=cost['cost'].mode().to_numpy()[0]
+    
     plt.subplot(221)
-    ax1 = sb.distplot(cost['cost'])
+    sb.distplot(cost['cost'])
+    
+    plt.axvline(median, color='g', linestyle='--')
+    plt.axvline(mean, color='r', linestyle = '--')
+    #plt.axvline(mode, color='b', linestyle = '--')
+    plt.legend({'Mean':mean,'Median':median})
+
     plt.subplot(222)
-    ax2 = sb.boxplot(x='type', y='cost', data=cost)
+    sb.boxplot(x='type', y='cost', data=cost)
     # g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
     # g.despine(left=True)
     # g.set_ylabels("Cost")
