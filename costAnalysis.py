@@ -7,6 +7,8 @@ from matplotlib import pyplot as plt
 import seaborn as sb
 import os
 
+#Calculates daily spending and plots them based on the types and markets
+
 def setEnvironment():
     #sb.set(style="whitegrid")
     plt.style.use('seaborn-whitegrid')
