@@ -70,7 +70,7 @@ def plotSubPlots(cost):
     
     plt.subplot(221)
     sb.distplot(cost['cost'])
-    
+    #draw vertical of median on the distribution graph
     plt.axvline(median, color='g', linestyle='--')
     plt.axvline(mean, color='r', linestyle = '--')
     #plt.axvline(mode, color='b', linestyle = '--')
