@@ -84,6 +84,6 @@ class Spending():
 
 if __name__ == '__main__':
     spend = Spending()
-    #spend.plotSubPlots()
+    spend.plotSubPlots()
     #spend.plotBars()
     spend.showDataset()
