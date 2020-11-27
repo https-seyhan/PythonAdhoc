@@ -1,7 +1,7 @@
 import numpy as np
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
-nlp = spacy.load("en_core_web_sm") # NLP library
+nlp = spacy.load("en_core_web_sm") # NLP corpus
 import urllib.request
 
 # Create Object that reads data of a web page and remove stop words and tokenize words.
