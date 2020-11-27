@@ -4,7 +4,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 nlp = spacy.load("en_core_web_sm")
 import urllib.request
 
-#Create Object that reads data web page and remove stop words and tokenize words.
+#Create Object that reads data of web page and remove stop words and tokenize words.
 
 class webData():
     def __init__(self):
