@@ -5,6 +5,7 @@ nlp = spacy.load("en_core_web_sm")
 import urllib.request
 
 #Create Object that reads data of a web page and remove stop words and tokenize words.
+# The web page used is https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt
 
 class webData():
     def __init__(self):
