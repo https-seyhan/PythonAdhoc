@@ -2,6 +2,8 @@ from PyQt5 import QtCore, QtGui, QtQml
 import numpy as np
 import pandas as pd
 
+# show a given dataset in a window
+
 class DataFrameModel(QtCore.QAbstractTableModel):
     DtypeRole = QtCore.Qt.UserRole + 1000
     ValueRole = QtCore.Qt.UserRole + 1001
