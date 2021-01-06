@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 # show a given dataset in a window
+# using python windows programming
 
 class DataFrameModel(QtCore.QAbstractTableModel):
     DtypeRole = QtCore.Qt.UserRole + 1000
