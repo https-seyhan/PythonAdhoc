@@ -35,7 +35,6 @@ def shapeData(cost):
 
     #todays date
     tday = date.today()
-
     min_time = datetime.min.time()
     current_datetime = datetime.combine(tday, min_time)
 
