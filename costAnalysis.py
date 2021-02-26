@@ -95,7 +95,6 @@ def plotSubPlots(cost):
 
     print("Max Cost ", int(np.round(max(cost['cost']), 0)))
     typeCount = cost['type'].value_counts()
-
     plt.show()
 
 
