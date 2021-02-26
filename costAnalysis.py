@@ -23,7 +23,7 @@ def importData():
     return cost
 
 def shapeData(cost):
-    #print('Dates before modification {}'.format(cost['date']))
+    
 
     cost['newDate'] = cost['date'].apply(lambda x: str(x) + '20')
     cost['newDate2'] = cost['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
