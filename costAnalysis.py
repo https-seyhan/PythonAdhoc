@@ -105,7 +105,6 @@ def plotBars(cost):
     plt.show()
 
 def plotDists(cost):
-
     #plt.figure(figsize=figsize)
 
     fig, ax = plt.subplots(figsize=figsize)
