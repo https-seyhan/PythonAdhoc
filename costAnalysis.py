@@ -138,8 +138,6 @@ def plotBox(cost):
     markets = pd.DataFrame({'coles': coles, 'wolli': wolli})
     #markets.boxplot()
 
-    #print(markets.columns)
-    #print(markets.head())
 
 setEnvironment()
 #cost = importData()
