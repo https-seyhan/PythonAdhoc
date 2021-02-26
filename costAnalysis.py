@@ -97,7 +97,6 @@ def plotSubPlots(cost):
     typeCount = cost['type'].value_counts()
     plt.show()
 
-
 def plotBars(cost):
     plt.figure()
     sb.countplot(x="type", data=cost)
