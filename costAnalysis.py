@@ -66,7 +66,6 @@ def shapeData(cost):
 
 def plotSubPlots(cost):
     #figsize = (1500 / 50, 400 / 50)
-    
     median = cost['cost'].median()
     mean = cost['cost'].mean()
     mode=cost['cost'].mode().to_numpy()[0]
