@@ -10,7 +10,6 @@ class AsxDataExtract(scrapy.Spider):
     print("Test")
 
     def parse(self, response):
-
         query = '//*[@class="v-datatable v-table theme--light"]//tbody/tr'
         #query= '//*[@class ="v-table__overflow"]//tbody/tr'
         urls = response.xpath(query).extract()
