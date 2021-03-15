@@ -27,7 +27,7 @@ class myApp:
         window.close()
 
     def __getFile(self):
-        #journal = []
+        
         print("Get File")
         #return "Get File"
         with open("journal.txt", 'r') as file:
