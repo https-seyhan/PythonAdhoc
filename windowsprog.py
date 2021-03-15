@@ -35,7 +35,6 @@ class myApp:
         #self.__build()
 
 if __name__ == "__main__":
-    
     windows = myApp()
     #windows.build()
 
