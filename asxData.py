@@ -1,5 +1,4 @@
 import scrapy
-
 #run as scrapy crawl asxdataextract -o output.csv in the terminal
 
 class AsxDataExtract(scrapy.Spider):
