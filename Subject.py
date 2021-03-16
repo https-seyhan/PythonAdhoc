@@ -13,7 +13,7 @@ class Subject(object):
         for grade in self._grades:
             total += grade.score * grade.weight
             total_weight += grade.weight
-        print("Total Weight", total_weight)
+        
         return total 
         
         
