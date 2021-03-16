@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     app = QtGui.QGuiApplication(sys.argv)
     df = pd.DataFrame(np.random.randint(0, 100, size=(6, 7)), columns=list('ABCDEFG'))
-    print(df)
+    
     model = DataFrameModel(df)
     engine = QtQml.QQmlApplicationEngine()
     engine.rootContext().setContextProperty("table_model", model)
