@@ -49,7 +49,6 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         row = self._dataframe.index[index.row()]
         col = self._dataframe.columns[index.column()]
         dt = self._dataframe[col].dtype
-
         val = self._dataframe.iloc[row][col]
         if role == QtCore.Qt.DisplayRole:
             return str(val)
