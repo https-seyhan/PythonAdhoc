@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
 import time
+import os
 from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
 import seaborn as sb
-import os
+
 
 def setEnvironment():
     #sb.set(style="whitegrid")
