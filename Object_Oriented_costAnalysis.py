@@ -19,7 +19,6 @@ class Spending():
         os.chdir('/home/saul/Desktop')
         self.spend = pd.read_csv('spend.csv', sep=',')
         self.figsize = (1500 / 50, 400 / 50)
-
         self.__readFile()
 
     def __readFile(self):
