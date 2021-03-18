@@ -70,7 +70,6 @@ class Spending():
             for j in range(len(spend.columns)):
                 self.datatable.setItem(i, j, QtGui.QTableWidgetItem(str(df.iget_value(i, j))))
 
-
 if __name__ == '__main__':
     spend = Spending()
     spend.plotSubPlots()
