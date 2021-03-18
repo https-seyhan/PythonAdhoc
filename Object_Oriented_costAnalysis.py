@@ -2,13 +2,14 @@ import pandas as pd
 import os
 import numpy as np
 import time
+import sys
 from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
 import seaborn as sb
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
-import sys
+
 
 # Generate Spending class
 class Spending():
