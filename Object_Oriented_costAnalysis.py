@@ -28,7 +28,6 @@ class Spending():
         self.spend['newDate'] = self.spend['date'].apply(lambda x: str(x) + '20')
         self.spend['newDate2'] = self.spend['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
 
-
         self.spend['date'] = pd.to_datetime(self.spend.date)
         self.spend['newDate2'] = pd.to_datetime(self.spend.newDate2)
 
