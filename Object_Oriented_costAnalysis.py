@@ -3,10 +3,11 @@ import os
 import numpy as np
 import time
 import sys
+import seaborn as sb
 from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
-import seaborn as sb
+
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
 
