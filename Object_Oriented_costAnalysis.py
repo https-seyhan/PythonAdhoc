@@ -25,7 +25,6 @@ class Spending():
         print(" read File called!!!")
         print(self.spend.describe())
         # print('Dates before modification {}'.format(cost['date']))
-
         self.spend['newDate'] = self.spend['date'].apply(lambda x: str(x) + '20')
         self.spend['newDate2'] = self.spend['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
 
