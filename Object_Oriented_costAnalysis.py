@@ -56,7 +56,6 @@ class Spending():
         plt.yticks(ticks, ticks)
 
         print("Max Cost ", int(np.round(max(self.spend['cost']), 0)))
-
         typeCount = self.spend['type'].value_counts()
         plt.tight_layout() # make sure all graphs are tighty
         plt.show()
