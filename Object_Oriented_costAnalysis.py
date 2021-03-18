@@ -12,8 +12,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetIte
 
 # Generate Spending class
 class Spending():
-    def __init__(self):
-        
+    def __init__(self):    
         sb.set(style="whitegrid")
         pd.options.display.float_format = '{:.1f}'.format
         os.chdir('/home/saul/Desktop')
