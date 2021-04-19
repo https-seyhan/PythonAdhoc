@@ -8,7 +8,6 @@ from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
 
-
 # Generate Spending class
 class Spending():
     def __init__(self):    
