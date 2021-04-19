@@ -7,8 +7,7 @@ import seaborn as sb
 from datetime import datetime
 from datetime import date
 from matplotlib import pyplot as plt
-from PyQt5 import QtGui
-from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
+
 
 # Generate Spending class
 class Spending():
