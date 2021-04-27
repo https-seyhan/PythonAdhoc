@@ -15,5 +15,4 @@ class Student(object):
         for subject in self._subjects.values():
             total += subject.average_grade()
             count += 1
-
         return total / count
