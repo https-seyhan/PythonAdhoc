@@ -4,7 +4,6 @@ Grade = collections.namedtuple('Grade', ('score', 'weight'))
 class Subject(object):
     def __init__(self):
         self._grades = []
-
     def report_grade(self, score, weight):
         self._grades.append(Grade(score, weight))
     def average_grade(self):
