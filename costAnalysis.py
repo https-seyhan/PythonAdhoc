@@ -62,7 +62,6 @@ def plotSubPlots(cost):
     plt.axvline(mean, color='r', linestyle = '--')
     plt.axvline(mode, color='b', linestyle = '--')
     plt.legend({'Mean':mean,'Median':median, 'Mode':mode})
-
     plt.subplot(222)
     sb.boxplot(x='type', y='cost', data=cost)
     # g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
