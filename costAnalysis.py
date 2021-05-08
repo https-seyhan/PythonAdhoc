@@ -29,7 +29,6 @@ def shapeData(cost):
     cost['newDate2'] = pd.to_datetime(cost.newDate2)
     cost.set_index('newDate2')
     cost.sort_values(by='newDate2', inplace=True)
-
     #todays date
     tday = date.today()
     min_time = datetime.min.time()
