@@ -26,7 +26,6 @@ with connection.cursor() as cursor:
     cursor.execute(create_ratings_table_query)
     connection.commit()
 
-
 create_reviewers_table_query = """
 CREATE TABLE reviewers (
     id INT AUTO_INCREMENT PRIMARY KEY,
