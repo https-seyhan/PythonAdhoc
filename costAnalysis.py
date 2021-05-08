@@ -27,7 +27,6 @@ def shapeData(cost):
     #print('Date2!!!!!', cost['newDate2'])
     cost['date'] = pd.to_datetime(cost.date)
     cost['newDate2'] = pd.to_datetime(cost.newDate2)
-
     cost.set_index('newDate2')
     cost.sort_values(by='newDate2', inplace=True)
 
