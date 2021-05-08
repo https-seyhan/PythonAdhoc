@@ -21,7 +21,7 @@ def importData():
     print(cost.describe())
     return cost
 
-def shapeData(cost):  
+def shapeData(cost): 
     cost['newDate'] = cost['date'].apply(lambda x: str(x) + '20')
     cost['newDate2'] = cost['newDate'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y'))
     #print('Date2!!!!!', cost['newDate2'])
