@@ -58,7 +58,7 @@ def plotSubPlots(cost):
     mode=cost['cost'].mode().to_numpy()[0]
     plt.subplot(221)
     sb.distplot(cost['cost'])
- 
+
     plt.axvline(median, color='g', linestyle='--')
     plt.axvline(mean, color='r', linestyle = '--')
     plt.axvline(mode, color='b', linestyle = '--')
