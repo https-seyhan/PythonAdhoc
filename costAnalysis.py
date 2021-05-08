@@ -11,7 +11,6 @@ def setEnvironment():
     #sb.set(style="whitegrid")
     plt.style.use('seaborn-whitegrid')
     os.chdir('/home/saul/Desktop')
-
     pd.options.display.float_format = '{:.1f}'.format
     #figsize = (1500 / 50, 400 / 50)
     #fig, (ax1, ax2) = plt.subplots(ncols=1,nrows=2, figsize=figsize)
