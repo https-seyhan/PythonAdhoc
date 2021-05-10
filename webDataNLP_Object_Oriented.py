@@ -24,5 +24,5 @@ class webData():
         print("Words ", self.webText)
 
 if __name__ == "__main__":
-    print("Web Data Extraction Called")
+    
     webText = webData()
