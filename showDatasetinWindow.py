@@ -66,8 +66,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         return roles
 
 if __name__ == "__main__":
-    import os
-    import sys
+
 
     app = QtGui.QGuiApplication(sys.argv)
     df = pd.DataFrame(np.random.randint(0, 100, size=(6, 7)), columns=list('ABCDEFG'))    
