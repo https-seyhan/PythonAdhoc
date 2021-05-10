@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtQml
 import numpy as np
 import pandas as pd
+import os
+import sys
 
 # show a given dataset in a window
 # using python windows programming
