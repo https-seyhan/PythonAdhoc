@@ -24,5 +24,4 @@ class webData():
         print("Words ", self.webText)
 
 if __name__ == "__main__":
-
     webText = webData()
