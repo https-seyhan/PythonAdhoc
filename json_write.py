@@ -9,6 +9,7 @@ data['people'].append({
     'website': 'stackabuse.com',
     'from': 'Nebraska'
 })
+
 data['people'].append({
     'name': 'Larry',
     'website': 'google.com',
