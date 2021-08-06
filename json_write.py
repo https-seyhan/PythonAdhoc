@@ -15,6 +15,7 @@ data['people'].append({
     'website': 'google.com',
     'from': 'Michigan'
 })
+
 data['people'].append({
     'name': 'Tim',
     'website': 'apple.com',
