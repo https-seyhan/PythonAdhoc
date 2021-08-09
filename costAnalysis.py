@@ -109,7 +109,6 @@ def plotDists(cost):
 def plotBox(cost):
     wolli = cost['cost'][cost['market'] == 'wolli']
     print(wolli.describe())
-
     coles = cost['cost'][cost['market'] == 'coles']
     print(coles.describe())
 
