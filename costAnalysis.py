@@ -92,7 +92,6 @@ def plotDists(cost):
     fig, ax = plt.subplots(figsize=figsize)
     wolli = cost[cost['market']=='wolli']
     #print(wolli.describe())
-
     coles = cost[cost['market']=='coles']
     #print(coles.describe())
 
