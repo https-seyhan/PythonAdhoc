@@ -94,7 +94,6 @@ def plotDists(cost):
     #print(wolli.describe())
     coles = cost[cost['market']=='coles']
     #print(coles.describe())
-
     #wolli['cost'].plot.hist(histtype='step', bins=4)
     wolli['cost'].plot.density()
     #plt.legend(cost['market'])
