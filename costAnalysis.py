@@ -103,7 +103,6 @@ def plotDists(cost):
     plt.xlabel('Coles and Wolli Costs')
     markets = cost['market'][(cost['market']=='wolli') | (cost['market']=='coles')].unique()
     print(markets)
-
     print("Series ", pd.Series(cost['market'][(cost['market']=='wolli') | (cost['market']=='coles')].get_values()))
 
     #legends = pd.DataFrame({coles:'coles', wolli:'wolli'})
