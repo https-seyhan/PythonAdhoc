@@ -111,7 +111,6 @@ def plotBox(cost):
     print(wolli.describe())
     coles = cost['cost'][cost['market'] == 'coles']
     print(coles.describe())
-
     markets = pd.DataFrame({'coles': coles, 'wolli': wolli})
     #markets.boxplot()
 setEnvironment()
