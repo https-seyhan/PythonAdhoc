@@ -89,7 +89,6 @@ def plotBars(cost):
 
 def plotDists(cost):
     #plt.figure(figsize=figsize)
-
     fig, ax = plt.subplots(figsize=figsize)
     wolli = cost[cost['market']=='wolli']
     #print(wolli.describe())
