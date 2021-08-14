@@ -14,7 +14,6 @@ def Read(startPage, endPage):
         text += pageObj.extractText()
         startPage += 1
     pdfFileObj.close()
-
     for myWord in text:
         if myWord != '\n':
             cleanText += myWord
