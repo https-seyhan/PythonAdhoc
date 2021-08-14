@@ -64,6 +64,7 @@ def plotSubPlots(cost):
     plt.legend({'Mean':mean,'Median':median, 'Mode':mode})
     plt.subplot(222)
     sb.boxplot(x='type', y='cost', data=cost)
+    
     # g = sb.catplot(x="type", y="cost", hue="market", data=cost,height=6, kind="bar", palette="muted")
     # g.despine(left=True)
     # g.set_ylabels("Cost")
