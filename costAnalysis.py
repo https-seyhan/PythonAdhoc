@@ -69,7 +69,7 @@ def plotSubPlots(cost):
     # g.set_ylabels("Cost")
     # g.set_xlabels(("Cost Type"))
     plt.subplot(212)
-    
+   
     sb.boxplot(x='market', y='cost', data=cost)
     cost_max = int(np.round(max(cost['cost']), 0))
     ticks = [0, int(np.round(0.1 * cost_max, 0)), int(np.round(0.2 * cost_max, 0)), int(np.round(0.3 * cost_max, 0)),
