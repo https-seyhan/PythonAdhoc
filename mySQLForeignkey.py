@@ -36,7 +36,7 @@ CREATE TABLE reviewers (
 with connection.cursor() as cursor:
     cursor.execute(create_reviewers_table_query)
     connection.commit()
-
+#Query 2
 create_movies_table_query = """
 CREATE TABLE movies(
     id INT AUTO_INCREMENT PRIMARY KEY,
