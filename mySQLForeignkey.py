@@ -25,7 +25,7 @@ CREATE TABLE ratings (
 with connection.cursor() as cursor:
     cursor.execute(create_ratings_table_query)
     connection.commit()
-
+#Query 1
 create_reviewers_table_query = """
 CREATE TABLE reviewers (
     id INT AUTO_INCREMENT PRIMARY KEY,
