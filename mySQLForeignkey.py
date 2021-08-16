@@ -49,4 +49,3 @@ CREATE TABLE movies(
 with connection.cursor() as cursor:
     cursor.execute(create_movies_table_query)
     connection.commit()
-
