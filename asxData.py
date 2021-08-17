@@ -1,5 +1,6 @@
 import scrapy
 #run as scrapy crawl asxdataextract -o output.csv in the terminal
+
 class AsxDataExtract(scrapy.Spider):
     name='asxdataextract'
     allowed_domains = ["listcorp.com/asx/sectors",]
