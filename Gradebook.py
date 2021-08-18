@@ -12,7 +12,7 @@ class Gradebook(object):
 if __name__ == '__main__':
     book = Gradebook()
     albert = book.student('Albert Einstein')
- 
+
     comp = albert.subject('Computer')
     comp.report_grade(10, 0.9)
   
