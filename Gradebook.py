@@ -18,5 +18,4 @@ if __name__ == '__main__':
     
     math = albert.subject('Math')
     math.report_grade(80, 0.10)
-
     print(albert.average_grade())
