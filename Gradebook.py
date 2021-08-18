@@ -14,7 +14,7 @@ if __name__ == '__main__':
     albert = book.student('Albert Einstein')
     comp = albert.subject('Computer')
     comp.report_grade(10, 0.9)
- 
+
     math = albert.subject('Math')
     math.report_grade(80, 0.10)
     print(albert.average_grade())
