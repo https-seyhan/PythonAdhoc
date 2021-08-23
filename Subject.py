@@ -11,6 +11,6 @@ class Subject(object):
         for grade in self._grades:
             total += grade.score * grade.weight
             total_weight += grade.weight
-        return total 
+        return total
 
        
