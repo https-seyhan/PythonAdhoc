@@ -12,4 +12,4 @@ class Subject(object):
             total += grade.score * grade.weight
             total_weight += grade.weight
         return total
-    
+   
