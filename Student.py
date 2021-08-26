@@ -3,7 +3,6 @@ from Subject import *
 class Student(object):
     def __init__(self):
         self._subjects = {}
-
     def subject(self, name):
         if name not in self._subjects:
             self._subjects[name] = Subject()
