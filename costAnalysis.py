@@ -76,6 +76,7 @@ def plotSubPlots(cost):
              int(np.round(0.4 * cost_max, 0)),
              int(np.round(0.5 * cost_max, 0)), int(np.round(0.6 * cost_max, 0)), int(np.round(0.7 * cost_max, 0)),
              int(np.round(0.8 * cost_max, 0)), int(np.round(0.9 * cost_max, 0)), int(np.round(cost_max, 0))]
+    
     plt.yticks(ticks, ticks)
     print("Max Cost ", int(np.round(max(cost['cost']), 0)))
     typeCount = cost['type'].value_counts()
