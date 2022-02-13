@@ -8,7 +8,7 @@ class Student(object):
         if name not in self._subjects:
             self._subjects[name] = Subject()
         return self._subjects[name]
-
+    
     def average_grade(self):
         print(self._subjects)
         total, count = 0, 0
