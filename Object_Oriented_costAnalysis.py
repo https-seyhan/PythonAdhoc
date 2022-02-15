@@ -66,6 +66,7 @@ class Spending():
         self.datatable = QtWidgets.QTableWidget(parent=self)
         self.datatable.setColumnCount(len(self.spend.columns))
         self.datatable.setRowCount(len(self.spend.index))
+        
         for i in range(len(self.spend.index)):
             for j in range(len(spend.columns)):
                 self.datatable.setItem(i, j, QtGui.QTableWidgetItem(str(df.iget_value(i, j))))
