@@ -1,5 +1,6 @@
 import collections
 Grade = collections.namedtuple('Grade', ('score', 'weight'))
+
 class Subject(object):
     def __init__(self):
         self._grades = []
