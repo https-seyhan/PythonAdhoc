@@ -43,7 +43,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         if parent.isValid():
             return 0
         return self._dataframe.columns.size
-   
+  
     def data(self, index, role=QtCore.Qt.DisplayRole):
         if not index.isValid() or not (0 <= index.row() < self.rowCount() \
             and 0 <= index.column() < self.columnCount()):
