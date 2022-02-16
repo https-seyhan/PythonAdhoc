@@ -22,7 +22,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         
     def dataFrame(self):
         return self._dataframe
- 
+
     dataFrame = QtCore.pyqtProperty(pd.DataFrame, fget=dataFrame, fset=setDataFrame)
     @QtCore.pyqtSlot(int, QtCore.Qt.Orientation, result=str)
    
