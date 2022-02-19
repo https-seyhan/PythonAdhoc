@@ -77,7 +77,7 @@ if __name__ == "__main__":
     engine.rootContext().setContextProperty("table_model", model)
     qml_path = os.path.join(os.path.dirname(__file__), "main.qml")
     engine.load(QtCore.QUrl.fromLocalFile(qml_path))
-    
+   
     if not engine.rootObjects():
         sys.exit(-1)
     engine.quit.connect(app.quit)
