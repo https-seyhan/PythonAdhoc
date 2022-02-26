@@ -54,7 +54,7 @@ class Spending()049111:
         typeCount = self.spend['type'].value_counts()
         plt.tight_layout() # make sure all graphs are tighty
         plt.show()
-     
+    
     def plotBars(self):
         plt.figure()
         sb.countplot(x="type", data=self.spend)
