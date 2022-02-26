@@ -9,7 +9,7 @@ from datetime import date
 from matplotlib import pyplot as plt
 
 # Generate Spending class
-class Spending():
+class Spending()049111:
     def __init__(self):    
         sb.set(style="whitegrid")
         pd.options.display.float_format = '{:.1f}'.format
@@ -17,7 +17,7 @@ class Spending():
         self.spend = pd.read_csv('spend.csv', sep=',')
         self.figsize = (1500 / 50, 400 / 50)
         self.__readFile()
-  
+ 
     def __readFile(self):
         print(self.spend.describe())
         # print('Dates before modification {}'.format(cost['date']))
