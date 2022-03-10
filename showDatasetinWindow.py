@@ -48,6 +48,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         if not index.isValid() or not (0 <= index.row() < self.rowCount() \
             and 0 <= index.column() < self.columnCount()):
             return QtCore.QVariant()
+        
         row = self._dataframe.index[index.row()]
         col = self._dataframe.columns[index.column()]
         dt = self._dataframe[col].dtype
