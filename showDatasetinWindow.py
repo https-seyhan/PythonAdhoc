@@ -33,7 +33,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
             else:
                 return str(self._dataframe.index[section])
         return QtCore.QVariant()
-
+    
     def rowCount(self, parent=QtCore.QModelIndex()):
         if parent.isValid():
             return 0
