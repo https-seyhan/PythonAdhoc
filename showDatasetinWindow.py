@@ -27,7 +27,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
     @QtCore.pyqtSlot(int, QtCore.Qt.Orientation, result=str)
    
     def headerData(self, section: int, orientation: QtCore.Qt.Orientation, role: int = QtCore.Qt.DisplayRole):
-      
+     
         if role == QtCore.Qt.DisplayRole:
             if orientation == QtCore.Qt.Horizontal:
                 return self._dataframe.columns[section]
