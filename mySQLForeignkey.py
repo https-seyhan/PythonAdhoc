@@ -46,7 +46,6 @@ CREATE TABLE movies(
     genre VARCHAR(100),
     collection_in_mil INT
 )
-
 """
 with connection.cursor() as cursor:
     cursor.execute(create_movies_table_query)
