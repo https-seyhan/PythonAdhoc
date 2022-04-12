@@ -11,6 +11,7 @@ class Student(object):
     def average_grade(self):
         print(self._subjects)
         total, count = 0, 0
+        
         for subject in self._subjects.values():
             total += subject.average_grade()
             count += 1
