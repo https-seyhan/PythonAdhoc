@@ -7,7 +7,7 @@ import urllib.request
 # The web page used is https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt
 
 class webData():
-    
+   
     def __init__(self):
         self.webText = []
         self.__textAnalysis()
