@@ -16,7 +16,7 @@ class myApp:
         layout = [[sg.Text(self.journal)], [sg.Button("OK")]]
         # Create the window
         window = sg.Window("Demo", layout)
-    
+   
         # Create an event loop
         while True:
             event, values = window.read()
