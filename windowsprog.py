@@ -6,7 +6,6 @@ import os
 os.chdir('/home/saul/pythontraining/NLP')
 
 nlp = en_core_web_sm.load()
-
 # GUI Application Class
 class myApp:
     def __init__(self):
