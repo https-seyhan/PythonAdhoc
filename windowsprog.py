@@ -27,7 +27,7 @@ class myApp:
             if event == "OK" or event == sg.WIN_CLOSED:
                 break
         window.close()
-       
+      
     # extract file
     def __getFile(self):   
         print("Get File")
