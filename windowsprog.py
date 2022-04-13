@@ -1,5 +1,5 @@
 #Python GUI programming example.
-import PySimpleGUI as sg
+import PySimpleGUI as sg # windows
 import spacy #NLP
 import en_core_web_sm
 import os
