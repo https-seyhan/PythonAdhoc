@@ -1,6 +1,6 @@
 #Python GUI programming example.
 import PySimpleGUI as sg
-import spacy
+import spacy #NLP
 import en_core_web_sm
 import os
 os.chdir('/home/saul/pythontraining/NLP')
