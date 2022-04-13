@@ -13,7 +13,7 @@ class myApp:
         #self.__build()
         self.journal = []
         self.__getFile()
-       
+      
     def __build(self):
         layout = [[sg.Text(self.journal)], [sg.Button("OK")]]
         # Create the window
