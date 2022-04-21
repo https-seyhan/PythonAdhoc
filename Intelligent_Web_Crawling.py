@@ -6,7 +6,7 @@ class AsxDataExtract(scrapy.Spider):
     start_urls = ["https://www.listcorp.com/asx/sectors/information-technology"]
     #category = 'information-technology'
     #links = {}
-    print("Test")
+    #print("Test")
     def parse(self, response):
         query = '//*[@class="v-datatable v-table theme--light"]//tbody/tr'
         #query= '//*[@class ="v-table__overflow"]//tbody/tr'
