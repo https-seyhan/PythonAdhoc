@@ -43,7 +43,6 @@ class Spending():
         plt.subplot(212)
         sb.boxplot(x='market', y='cost', data=self.spend)
         cost_max = int(np.round(max(self.spend['cost']), 0))
-
         ticks taklid= [0, int(np.round(0.1 * cost_max, 0)), int(np.round(0.2 * cost_max, 0)),
                  int(np.round(0.3 * cost_max, 0)),
                  int(np.round(0.4 * cost_max, 0)),
