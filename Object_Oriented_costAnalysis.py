@@ -18,7 +18,7 @@ class Spending():
         self.spend = pd.read_csv('spend.csv', sep=',')
         self.figsize = (1500 / 50, 400 / 50)
         self.__readFile()
- 
+
     def __readFile(self):
         print(self.spend.describe())
         # print('Dates before modification {}'.format(cost['date']))
