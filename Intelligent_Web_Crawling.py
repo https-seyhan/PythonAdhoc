@@ -3,6 +3,7 @@ import scrapy
 class AsxDataExtract(scrapy.Spider):
     name='asxdataextract' #name of the crawl
     allowed_domains = ["listcorp.com/asx/sectors",] # domain(s) to crawl
+    
     start_urls = ["https://www.listcorp.com/asx/sectors/information-technology"]
     #category = 'information-technology'
     #links = {}
