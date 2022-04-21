@@ -1,7 +1,6 @@
 import json
 import os
 os.chdir('/home/saul/Business')
-
 data = {}
 data['people'] = []
 data['people'].append({
