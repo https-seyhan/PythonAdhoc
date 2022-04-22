@@ -39,7 +39,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         if parent.isValid():
             return 0
         return len(self._dataframe.index)
-  
+ 
     def columnCount(self, parent=QtCore.QModelIndex()):
         if parent.isValid():
             return 0
