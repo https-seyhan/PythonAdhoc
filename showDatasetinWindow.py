@@ -14,7 +14,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
     def __init__(self, df=pd.DataFrame(), parent=None):
         super(DataFrameModel, self).__init__(parent)
         self._dataframe = df
-  
+ 
     def setDataFrame(self, dataframe):
         self.beginResetModel()
         self._dataframe = dataframe.copy()
