@@ -10,7 +10,7 @@ class Gradebook(object):
         return self._students[name]
 
 if __name__ == '__main__':
- 
+
     book = Gradebook()
     albert = book.student('Albert Einstein')
     comp = albert.subject('Computer')
