@@ -21,7 +21,6 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         self.endResetModel()
     def dataFrame(self):
         return self._dataframe
-
     dataFrame = QtCore.pyqtProperty(pd.DataFrame, fget=dataFrame, fset=setDataFrame)
     @QtCore.pyqtSlot(int, QtCore.Qt.Orientation, result=str)
    
