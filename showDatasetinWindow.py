@@ -19,7 +19,6 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         self.beginResetModel()
         self._dataframe = dataframe.copy()
         self.endResetModel()
-
     def dataFrame(self):
         return self._dataframe
 
