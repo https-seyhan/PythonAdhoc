@@ -20,4 +20,4 @@ def Read(startPage, endPage):
     text = cleanText.split()
     print(text)
     
-Read(0,0) # 
+Read(0,0) # Read
