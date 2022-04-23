@@ -8,7 +8,7 @@ def Read(startPage, endPage):
     text = []
     cleanText = ""
     pdfFileObj = open('usaassangejudgement.pdf', 'rb')
-  
+ 
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj) #PDF Reader
   
     while startPage <= endPage:
