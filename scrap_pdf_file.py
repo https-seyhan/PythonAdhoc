@@ -21,5 +21,5 @@ def Read(startPage, endPage):
             cleanText += myWord
     text = cleanText.split()
     print(text)
-    
+   
 Read(0,0) # Read coordinates
