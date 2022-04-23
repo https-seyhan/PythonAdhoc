@@ -19,7 +19,7 @@ class webData():
                 if not token.is_stop:
                     #print(token.text, token.pos_, token.dep_)
                     self.webText.append(token.text)
-           
+          
     def __printWords(self):
         print("Words ", self.webText)
 
