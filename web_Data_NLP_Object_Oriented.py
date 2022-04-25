@@ -14,7 +14,7 @@ class webData():
     def __textAnalysis(self):
         webData = urllib.request.urlopen('https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt').read()
         doc = nlp(str(webData))
-      
+     
         for token in doc:
                 if not token.is_stop:
                     #print(token.text, token.pos_, token.dep_)
