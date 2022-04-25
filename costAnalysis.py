@@ -68,6 +68,7 @@ def plotSubPlots(cost):
     # g.despine(left=True)
     # g.set_ylabels("Cost")
     # g.set_xlabels(("Cost Type"))
+    
     plt.subplot(212)
     sb.boxplot(x='market', y='cost', data=cost)
     cost_max = int(np.round(max(cost['cost']), 0))
