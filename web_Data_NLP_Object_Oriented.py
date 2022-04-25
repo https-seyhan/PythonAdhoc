@@ -6,7 +6,6 @@ nlp = spacy.load("en_core_web_sm") # SpaCy NLP corpus
 # Create Object that reads data of a web page and remove stop words and tokenize words.
 
 class webData():
-
     def __init__(self):
         self.webText = []
         self.__textAnalysis()
