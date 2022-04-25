@@ -10,7 +10,7 @@ class webData():
         self.webText = []
         self.__textAnalysis()
         self.__printWords()
-    
+   
     def __textAnalysis(self):
         webData = urllib.request.urlopen('https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt').read()
         doc = nlp(str(webData))
