@@ -8,6 +8,7 @@ from datetime import date
 from matplotlib import pyplot as plt
 
 def setEnvironment():
+    
     #sb.set(style="whitegrid")
     plt.style.use('seaborn-whitegrid')
     os.chdir('/home/saul/Desktop')
