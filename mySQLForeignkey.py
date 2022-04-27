@@ -21,6 +21,7 @@ CREATE TABLE ratings (
     FOREIGN KEY(reviewer_id) REFERENCES reviewers(id),
     PRIMARY KEY(movie_id, reviewer_id)
 )
+
 """
 with connection.cursor() as cursor:
     cursor.execute(create_ratings_table_query)
