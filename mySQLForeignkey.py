@@ -32,6 +32,7 @@ CREATE TABLE reviewers (
     first_name VARCHAR(100),
     last_name VARCHAR(100)
 )
+
 """
 with connection.cursor() as cursor:
     cursor.execute(create_reviewers_table_query)
