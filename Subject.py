@@ -7,7 +7,7 @@ class Subject(object):
     
     def report_grade(self, score, weight):
         self._grades.append(Grade(score, weight))
-       
+      
     def average_grade(self):
         total, total_weight = 0, 0
         for grade in self._grades:
