@@ -1,4 +1,4 @@
-#Python GUI programming example.
+#Python GUI programming example. Create windows
 import PySimpleGUI as sg # windows
 import spacy #NLP
 import en_core_web_sm
