@@ -10,6 +10,7 @@ from matplotlib import pyplot as plt
 
 # Generate Spending class
 class Spending():
+    
     def __init__(self):  
         sb.set(style="whitegrid")
         pd.options.display.float_format = '{:.1f}'.format
