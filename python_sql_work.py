@@ -11,6 +11,6 @@ mycursor = mydb.cursor()
 mycursor.execute("SELECT Concat(FirstName, LastName) AS fulldetail FROM Persons;")
 
 myresult = mycursor.fetchall()
-
+#print results
 for x in myresult:
   print(x)
