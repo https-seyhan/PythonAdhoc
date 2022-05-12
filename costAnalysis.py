@@ -33,7 +33,7 @@ def shapeData(cost):
     tday = date.today()
     min_time = datetime.min.time()
     current_datetime = datetime.combine(tday, min_time)
-  
+ 
     #timestamp = time.mktime(time.strptime(tday, '%Y-%m-%d'))
     #print(cost['date'])
     #print('From the start date of ':%Y-%m-%d' Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['newDate2'].min(), cost['cost'].sum(), (cost['newDate2'].max() - cost['newDate2'].min()).days,
@@ -41,7 +41,7 @@ def shapeData(cost):
    
     print('Between ', cost["newDate2"].min().strftime("%d/%m/%Y"), ' and ', date.today().strftime("%d/%m/%Y"),  'Total Market Cost is  %0.1f in % 2d days (%2d months) with Daily spend is %0.1f' % ( cost['cost'].sum(), (current_datetime - cost['newDate2'].min()).days, (current_datetime - cost['newDate2'].min()).days/30,
                                                                              cost['cost'].sum() / (current_datetime - cost['newDate2'].min()).days))
-    
+   
     print('Between ', cost["newDate2"].min().strftime("%d/%m/%Y"), ' and ', date.today().strftime("%d/%m/%Y"),  ' Food Cost is  %0.1f in % 2d days (%2d months) with Daily spend is %0.1f' % (cost['cost'][cost['type'] == 'food'].sum(), (current_datetime - cost['newDate2'].min()).days, (current_datetime - cost['newDate2'].min()).days/30,
                                                                               cost['cost'][cost['type'] == 'food'].sum() / (current_datetime - cost['newDate2'].min()).days))
   
