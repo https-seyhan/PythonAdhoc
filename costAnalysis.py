@@ -33,7 +33,7 @@ def shapeData(cost):
     tday = date.today()
     min_time = datetime.min.time()
     current_datetime = datetime.combine(tday, min_time)
-    
+   
     #timestamp = time.mktime(time.strptime(tday, '%Y-%m-%d'))
     #print(cost['date'])
     #print('From the start date of ':%Y-%m-%d' Total Market Cost is  %0.1f in % 2d days with Daily spend is %0.1f' % (cost['newDate2'].min(), cost['cost'].sum(), (cost['newDate2'].max() - cost['newDate2'].min()).days,
@@ -51,7 +51,7 @@ def shapeData(cost):
     print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
     #print("Type ", type(cost['newDate2'].max()))
     print("Start Date !!!!!!!!! ", cost['newDate2'].min())
-  
+ 
     #sb.lineplot(x="date", y="cost", data=cost)
     #sb.distplot(cost)
     #ax.plot(cost['cost'])
