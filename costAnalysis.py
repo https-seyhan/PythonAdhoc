@@ -48,7 +48,7 @@ def shapeData(cost):
     
     print('Between ', cost["newDate2"].min().strftime("%d/%m/%Y"), ' and ', date.today().strftime("%d/%m/%Y"),  ' Alcohol Cost is  %0.1f in % 2d days (%2d months) with Daily spend is %0.1f' % (cost['cost'][cost['type'] == 'alcohol'].sum(), (current_datetime - cost['newDate2'].min()).days, (current_datetime - cost['newDate2'].min()).days/30,
                                                                               cost['cost'][cost['type'] == 'alcohol'].sum() / (current_datetime - cost['newDate2'].min()).days))
-    
+   
     print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
     #print("Type ", type(cost['newDate2'].max()))
     print("Start Date !!!!!!!!! ", cost['newDate2'].min())
