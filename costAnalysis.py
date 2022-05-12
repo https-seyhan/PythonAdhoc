@@ -51,7 +51,7 @@ def shapeData(cost):
     print("Food Cost Descriptive Analysis ", cost['cost'][cost['type'] == 'food'].describe())
     #print("Type ", type(cost['newDate2'].max()))
     print("Start Date !!!!!!!!! ", cost['newDate2'].min())
- 
+
     #sb.lineplot(x="date", y="cost", data=cost)
     #sb.distplot(cost)
     #ax.plot(cost['cost'])
