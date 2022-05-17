@@ -1,8 +1,11 @@
 import pandas as pd
-
+import os
 class readFiles:
 	name= 'read csv files'
 	print('Read Files')
+	
+	def __init__(self):
+		
 	
 
 
