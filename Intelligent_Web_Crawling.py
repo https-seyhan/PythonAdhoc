@@ -9,7 +9,7 @@ class AsxDataExtract(scrapy.Spider):
     #category = 'information-technology'
     #links = {}
     #parser
-
+    
     def parse(self, response):
         query = '//*[@class="v-datatable v-table theme--light"]//tbody/tr' #location to scrap data
         #query= '//*[@class ="v-table__overflow"]//tbody/tr'
