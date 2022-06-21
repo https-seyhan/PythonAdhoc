@@ -31,7 +31,7 @@ class Spending():
         self.spend.sort_values(by='newDate2', inplace=True)
 
     def plotSubPlots(self):
-    
+   
         self.fig, self.ax = plt.subplots(figsize=self.figsize)
         plt.subplot(221)
         ax1 = sb.distplot(self.spend['cost'])
