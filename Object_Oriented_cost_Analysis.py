@@ -19,7 +19,7 @@ class Spending():
         self.figsize = (1500 / 50, 400 / 50)
         self.__readFile()
     def __readFile(self):
-    
+   
         print(self.spend.describe())
         # print('Dates before modification {}'.format(cost['date']))
         self.spend['newDate'] = self.spend['date'].apply(lambda x: str(x) + '20')
