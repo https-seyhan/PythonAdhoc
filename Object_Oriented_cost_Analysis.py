@@ -28,7 +28,7 @@ class Spending():
         self.spend['newDate2'] = pd.to_datetime(self.spend.newDate2)
         self.spend.set_index('newDate2')
         self.spend.sort_values(by='newDate2', inplace=True)
-      
+     
     def plotSubPlots(self):
         self.fig, self.ax = plt.subplots(figsize=self.figsize)
         plt.subplot(221)
