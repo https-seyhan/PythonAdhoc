@@ -33,7 +33,7 @@ class readFiles:
 		#print('Date ', json_object['header']['date'], '\n')
 		#print('From ', json_object['header']['from'], '\n')
 		#print('Received ', json_object['header']['received'], '\n')
-	
+
 		for item in json_object['header']:
 			#print(item)
 			#print(item['date'])
