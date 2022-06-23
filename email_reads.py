@@ -18,7 +18,7 @@ class readFiles:
 	def read_eml_file(self):
 		with open('sample_file.eml', 'rb') as email:
   			raw_email = email.read()
-		
+	
 		ep = eml_parser.EmlParser()
 		parsed_eml = ep.decode_email_bytes(raw_email)
 		#print(json.dumps(parsed_eml))
