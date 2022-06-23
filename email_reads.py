@@ -30,13 +30,14 @@ class readFiles:
 		json_data = json.loads(text)
 		self.get_header(json_data)
 
-	def get_header(self, json_object):
+	def get_header(self, json_AU
+object):
 		#print('Date ', json_object['header']['date'], '\n')
 		#print('From ', json_object['header']['from'], '\n')
 		#print('Received ', json_object['header']['received'], '\n')
 		for item in json_object['header']:
 			#print(item)
-			
+		
 			if item == 'received':
 				#print('Received called')
 				#print(len(json_object['header']['received']))
