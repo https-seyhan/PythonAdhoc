@@ -8,7 +8,7 @@ import eml_parser
 os.chdir('/home/saul/kaggle')
 
 class readFiles:
-	name= 'read email files'
+	name= 'read email files'#print('Received Domain', json_object['header']['received_domain'], '\n')
 	email_details = []
 
 	def __init__(self):
@@ -33,7 +33,7 @@ class readFiles:
 		#print('Date ', json_object['header']['date'], '\n')
 		#print('From ', json_object['header']['from'], '\n')
 		#print('Received ', json_object['header']['received'], '\n')
-		
+	
 		for item in json_object['header']:
 			#print(item)
 			#print(item['date'])
