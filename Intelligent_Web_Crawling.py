@@ -1,7 +1,7 @@
 import scrapy
 
 #run as scrapy crawl asxdataextract -o output.csv in the terminal
-#class
+#class crawl
 class AsxDataExtract(scrapy.Spider):
     
     name='asxdataextract' #name of the crawl
