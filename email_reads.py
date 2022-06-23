@@ -44,7 +44,7 @@ class readFiles:
 					elements = list(json_object['header']['received'][element].items())
 					readFiles.email_details.append(elements)
 		
-		
+	
 		for list_recurse in range(len(readFiles.email_details)):
 			for list_element in range(len(readFiles.email_details[list_recurse])):
 				print('Tuple Size ', len(readFiles.email_details[list_recurse][list_element]))
