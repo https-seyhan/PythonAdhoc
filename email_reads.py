@@ -39,7 +39,6 @@ class readFiles:
 			if item == 'received':
 				#print('Received called')
 				#print(len(json_object['header']['received']))
-
 				for element in range(len(json_object['header']['received'])):
 					#print('Received elements ', json_object['header']['received'][element])
 					elements = list(json_object['header']['received'][element].items())
