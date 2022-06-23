@@ -24,7 +24,6 @@ class readFiles:
 		#print(json.dumps(parsed_eml))
 		self.get_information(json.dumps(parsed_eml, indent=4, sort_keys=True, default=str))
 		
-	
 	def get_information(self, text):
 		#print('Email Text ', text)
 		#print(type(text))
