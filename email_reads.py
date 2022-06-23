@@ -26,7 +26,7 @@ class readFiles:
 		
 	
 	def get_information(self, text):
-		print('Email Text ', text)
+		#print('Email Text ', text)
 		#print(type(text))
 		json_data = json.loads(text)
 
@@ -67,6 +67,8 @@ class readFiles:
 					print('tuple_element ', tuple_element)
 					#print('tuple_element size ', len(tuple_element))
 					print("Elements ", readFiles.email_details[list_recurse][list_element][tuple_element])
+					read_element = readFiles.email_details[list_recurse][list_element][tuple_element]
+					print('Type ', type(read_element))
 					tuple_element += 1
 					
 
