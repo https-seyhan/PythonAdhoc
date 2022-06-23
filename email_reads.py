@@ -39,7 +39,6 @@ class readFiles:
 		#print('Received Foremail', json_object['header']['received_foremail'], '\n')
 		#print('Received IP', json_object['header']['received_ip'], '\n')
 
-
 		for item in json_object['header']:
 			#print(item)
 			#print(item['date'])
