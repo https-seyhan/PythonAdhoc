@@ -43,7 +43,7 @@ class readFiles:
 					#print('Received elements ', json_object['header']['received'][element])
 					elements = list(json_object['header']['received'][element].items())
 					readFiles.email_details.append(elements)
-		
+	
 	
 		for list_recurse in range(len(readFiles.email_details)):
 			for list_element in range(len(readFiles.email_details[list_recurse])):
