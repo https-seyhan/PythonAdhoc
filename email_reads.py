@@ -36,7 +36,7 @@ class readFiles:
 		#print('Received ', json_object['header']['received'], '\n')
 		for item in json_object['header']:
 			#print(item)
-		
+	
 			if item == 'received':
 				#print('Received called')
 				#print(len(json_object['header']['received']))
